@@ -1,0 +1,25 @@
+<%- layout('/layouts/navbar.ejs') -%>
+<body>
+    <form method="post" action="/listings/<%=details.id%>?_method=patch" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-8 offset-2"> 
+                <h1>Edit your details</h1>
+        <div class="mb-3">
+            <label class="form-label" for="Title">Title:
+            </label>
+            <input type="text" value="<%=details.title%>" name="details[title]" class="form-control" required></div>
+        <div class="mb-3"> 
+            <label class="form-label" for="description">Description:</label><textarea name="details[description]" class="form-control" required><%=details.description%></textarea>
+        <div class="invalid-feedback">please enter valid description</div>
+        <div class="valid-feedback">description is good</div>
+        </div>
+        <div class="mb-3"><img src="<%=originalUrl%>" alt="" style="height: 200px;width: 250px;"></div>
+    <div class="mb-3"><label class="form-label" for="image">upload the image</label><input type="file" name="details[image]" value="<%=details.image%>" class="form-control"></div>
+       <div class="row"><div class="mb-3 col-md-4">Price:<label class="form-label" for="price"></label><input type="number" name="details[price]" value="<%=details.price%>" class="form-control" required></div>
+       <div class="col-md-8"><label class="form-label" for="country">Country</label><input type="text" name="details[country]" value="<%=details.country%>" class="form-control" required></div></div>
+       <div class="mb-3"><label class="form-label" for="location">Location</label><textarea name="details[location]" class="form-control" required><%=details.location%></textarea></div>
+        <button class="btn btn-dark">submit</button>      
+        </div>
+        </div>
+      </form>
+</body>

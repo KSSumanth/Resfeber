@@ -1,0 +1,10 @@
+const express = require("express");
+const wrapAsync=require("../utils/wrapAsync.js");
+const router=express.Router({mergeParams:true});
+const list = require("../models/schema.js");
+const Review = require("../models/reviews.js");
+const {reviewhandler,isLogedIn,isreviewAuthor}=require("../middleware.js");
+const reviewController = require("../controllers/reviews.js");
+router.post("/",isLogedIn,reviewhandler,wrapAsync(reviewController.writeReview));
+  router.delete("/:reviewId",isLogedIn,isreviewAuthor,wrapAsync(reviewController.deleteReview));
+  module.exports=router;

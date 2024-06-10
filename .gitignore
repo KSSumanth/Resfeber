@@ -1,0 +1,6 @@
+.env
+extra.js
+extrainfo.js
+index.html
+node_modules/
+**/.DS_Store

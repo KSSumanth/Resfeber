@@ -1,0 +1,47 @@
+<%- layout('/layouts/navbar.ejs') -%>
+
+    <body>
+        <form method="post" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h1>Rent your hotel</h1>
+                    <div><label class="form-label">Title:</label><input type="text" placeholder="Enter your hotel name"
+                            name="details[title]" class="form-control" required>
+                        <div class="invalid-feedback">please provide the title</div>
+                        <div class="valid-feedback">title is ok</div>
+                        <div></div>
+                    </div>
+                    <div><label class="form-label">Description:</label><textarea name="details[description]"
+                            placeholder="write the description about your hotel" class="form-control"
+                            required></textarea>
+                        <div class="invalid-feedback">please provide description</div>
+                        <div class="valid-feedback">Description is ok</div>
+                    </div>
+                    <!-- <div><label class="form-label">Image-url</label><input type="text" name="details[image]"
+                            placeholder="upload your hotel photo" class="form-control" required>
+                        <div class="invalid-feedback">please provide the image url</div>
+                        <div class="valid-feedback">image is ok</div>
+                    </div> -->
+                    <div><label class="form-label">Image-url</label><input type="file" name="details[image]"
+                             class="form-control" required>
+                        <div class="valid-feedback">image is ok</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><label class="form-label">Price:</label><input type="number"
+                                name="details[price]" placeholder="enter the price" class="form-control" required>
+                            <div class="invalid-feedback">please provide the valid price</div>
+                        </div>
+                        <div class="col-md-8"><label class="form-label">Country</label><input type="text"
+                                name="details[country]" placeholder="Enter your country" class="form-control" required>
+                            <div class="invalid-feedback">please provide the country name</div>
+                        </div>
+                    </div>
+                    <div><label class="form-label">Location:</label><textarea name="details[location]"
+                            placeholder="Enter your location" class="form-control" required></textarea>
+                        <div class="invalid-feedback">please provide the location</div>
+                    </div>
+                    <button class="btn btn-primary mt-2">submit</button>
+                </div>
+            </div>
+        </form>
+    </body>

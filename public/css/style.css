@@ -1,0 +1,135 @@
+body{
+    background-color: black;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    color: white;
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 100vh !important;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    background-color: white;
+}
+.navbar-brand i{
+    height: 2rem;
+    color: red;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 2rem 0rem;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    margin-bottom: 1rem;
+}
+.social-media-1{
+font-size: 0.8rem;
+}
+.social-media-1 a{
+    text-decoration: none;
+    color: black;
+}
+.social-media-1 a:hover{
+    text-decoration: underline;
+}
+.social-media-2{
+    font-size: 0.8rem;
+}
+.social-media-2 a{
+    text-decoration: none;
+    color: black;
+}
+.social-media-2 a:hover{
+    text-decoration: underline;
+}
+.social-media-3 a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+.social-media-3 a i{
+    margin-right: 1rem;
+}
+.pvt-limited{
+    margin-bottom: 0.7rem;
+}
+.pvt-limited a{
+text-decoration: none;
+color: black;
+}
+.pvt-limited a:hover{
+    text-decoration: underline;
+}
+.policy a{
+text-decoration: none;
+margin-right: 1rem;
+color: black;
+}
+.policy a:hover{
+    text-decoration: underline;
+}
+.row{
+    display: flex;
+    /* margin-top: 1rem !important; */
+    margin-right: 1rem !important;
+    /* flex-wrap: wrap; */
+}
+.listing-card{
+    margin-top: 1rem !important;
+    margin-right: 1rem !important;
+    height: 23rem !important;
+    border: none !important;
+}
+.card-img-top{
+   border-radius: 1rem !important;
+   width: 100%;
+   object-fit: cover;
+   margin-top: 1rem !important;
+   margin-left: 1rem !important;
+}
+.card-body{
+    padding: 0;
+}
+.detail{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: rgb(223, 176, 176);
+}
+.foot{
+    background-color: bisque;
+}
+.show-img{
+    height: 50vh !important;
+    width: auto;
+}
+.img{
+    height: 18rem !important;
+    margin-left: 200px !important;
+}
+.h1{
+    margin-left:190px;
+}
+.cb-detail-page{
+    margin-left: 235px;
+}
+.detail-btns{
+    display: flex;
+    margin-left: 200px;
+}
+.detail-btn{
+    margin-left: 1rem;
+}

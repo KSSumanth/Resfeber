@@ -1,0 +1,121 @@
+<%- layout('/layouts/navbar.ejs') -%>
+    <style>
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2px;
+            margin-left: 0px;
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .filter {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 1px 4px;
+            opacity: 0.7;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .filter p {
+            font-size: 15px;
+        }
+
+        .tax-data {
+            display: none;
+        }
+
+        .switch {
+            border: 1px solid black;
+            padding: 1rem;
+            border-radius: 1rem;
+            height: 3.2rem;
+            margin-left: 1rem;
+        }
+    </style>
+
+    <body>
+        <div class="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-cow"></i></div>
+                <p>Farms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-regular fa-snowflake"></i></div>
+                <p>Arctic</p>
+            </div>
+            <div class="switch">
+                <div class="form-check-reverse form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cold-sm-1">
+            <% for(list of allist) { %>
+                <a href="/listings/<%=list._id%>" class="detail">
+                    <div class="card listing-card" style="width: 18rem;">
+                        <img src="<%=list.image.url%>" class="card-img-top" alt="image"
+                            style="height: 15rem; width: 16rem;">
+                        <div class="card-img-overlay">sumanth</div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=list.title%>
+                            </h5>
+                            <p class="card-text">&#x20B9;<%=list.price.toLocaleString("en-IN");%><i
+                                        class="tax-data">&nbsp;&nbsp;+15% GST</i></p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+        <script>
+            let Switch = document.getElementById("flexSwitchCheckDefault");
+            Switch.addEventListener("click", () => {
+                //   console.log("button clicked");
+                let tax = document.getElementsByClassName("tax-data");
+                for (let data of tax) {
+                    if (data.style.display != "inline") {
+                        data.style.display = "inline";
+                    }
+                    else {
+                        data.style.display = "none";
+                    }
+                }
+            }
+            )
+        </script>
+    </body>
