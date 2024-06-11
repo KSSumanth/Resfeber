@@ -159,6 +159,7 @@ color: black;
         }
         .rtbox{
             margin-left: 0px !important;
+            width: 358px !important;
         }
         .mapboxgl-canvas{
             width: 300px !important;
@@ -166,5 +167,12 @@ color: black;
         }
         .footer-container{
             margin-left: 16px !important
+        }
+        .reviewbox{
+            width: 200px !important;
+        }
+        .foot{
+            margin-left: 100px !important;
+            width: 300px;
         }
     }
