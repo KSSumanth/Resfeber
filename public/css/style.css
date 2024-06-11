@@ -133,3 +133,25 @@ color: black;
 .detail-btn{
     margin-left: 1rem;
 }
+@media (min-width: 340px) and (max-width: 767px) {
+    .allist{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    @media (min-width: 221px) and (max-width: 541px){
+        .dt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .dtimg{
+            margin-left: 16px !important;
+        }
+        .dtbody{
+            margin-left: 16px !important;   
+        }
+    }
