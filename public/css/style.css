@@ -154,4 +154,7 @@ color: black;
         .dtbody{
             margin-left: 16px !important;   
         }
+        .mpbox{
+            margin-left: 0px !important;
+        }
     }
