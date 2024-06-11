@@ -157,4 +157,14 @@ color: black;
         .mpbox{
             margin-left: 0px !important;
         }
+        .rtbox{
+            margin-left: 0px !important;
+        }
+        .mapboxgl-canvas{
+            width: 300px !important;
+            height: 300px !important;
+        }
+        .footer-container{
+            margin-left: 16px !important
+        }
     }
