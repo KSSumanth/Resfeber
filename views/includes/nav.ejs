@@ -44,15 +44,15 @@
           </li>
         <% if(!currUser) { %>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/signup"><b>SignUp</b></a>
+            <a class="nav-link" aria-current="page" href="/user/signup"><b>SignUp</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login"><b>Login</b></a>
+            <a class="nav-link" href="/user/login"><b>Login</b></a>
           </li>
           <% } %>
           <% if(currUser) { %>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">LogOut</a>
+            <a class="nav-link" href="/user/logout">LogOut</a>
           </li>
           <% } %>
         </ul>

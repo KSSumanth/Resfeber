@@ -13,7 +13,7 @@ module.exports.isLogedIn=(req,res,next)=>{
             req.session.redirectUrl= req.originalUrl;   
             // console.log(User);
     req.flash("error","please login to your account to create your listing");
-    return res.redirect("/login");
+    return res.redirect("/user/login");
   }
   next();
 }

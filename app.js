@@ -71,10 +71,10 @@ app.use((req,res,next) => {
   next();
 }
 )
-app.use("/",listingsRouter);
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews",reviewsRouter);
-app.use("/",userRouter);
+app.use("/user",userRouter);
+app.use("/",listingsRouter);
 
 app.all("*",(req,res,next) => { ///works when try to access unavailabel route
   next(new expresserror(400,"page not found man"));

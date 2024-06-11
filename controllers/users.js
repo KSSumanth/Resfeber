@@ -19,7 +19,7 @@ module.exports.renderSignUpForm=(req,res) => {
     }
     catch(err){
       req.flash("error",err.message);
-      res.redirect("/signup");
+      res.redirect("/user/signup");
     }
   }
   module.exports.renderLoginForm=(req,res) => {
